@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TIIDELab SignUp Form</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .wrapper {
+        padding: 15px;
+        margin: 20px auto;
+        width: 70%;
+      }
+
+      input {
+        padding: 10px 12px;
+        margin: 10px 12px;
+      }
+
+      h2 {
+        margin: 10px 0 0 10px;
+      }
+
+      .pop {
+        background: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        height: 180vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        visibility: hidden;
+      }
+
+      .popup {
+        width: 500px;
+        margin-top: 10px;
+        background: #333;
+        border-radius: 6px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.1);
+        text-align: center;
+        padding: 0 30px 30px;
+        color: #fff;
+        visibility: hidden;
+        transition: transform 0.4s, top 0.4s;
+      }
+
+      .open-pop {
+        visibility: visible;
+      }
+
+      .open-popup {
+        visibility: visible;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+      .popup img {
+        width: 100px;
+        margin-top: -50px;
+        border-radius: 50%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      .popup h2 {
+        font-size: 38px;
+        font-weight: 500;
+        margin: 30px 0 10px;
+      }
+
+      .popup button {
+        width: 50%;
+        margin-top: 50px;
+        padding: 10px 0;
+        background: #6fd649;
+        color: #fff;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        border-radius: 4px;
+        cursor: pointer;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      .info{
+        text-align: left;
+      }
+
+      #firstName,
+      #middleName,
+      #lastName{
+        width: 30%;
+      }
+
+      #dob,
+      #sid{
+        width: 47%;
+      }
+
+      #address{
+        width: 98%;
+      }
+
+      #city,
+      #province,
+      #country,
+      #zip,
+      #empty,
+      #email{
+        width: 47.5%;
+      }
+
+      .logo{
+        width: 20%;
+      }
+
+      .head{
+        width: 80%;
+      }
+
+      header{
+        display: flex; 
+        align-items: center; 
+        justify-content: center
+      }
+
+      @media screen and (max-width: 800px){
+        header{
+            flex-direction: column;
+        }
+        .wrapper{
+            width: 100%;
+        }
+
+        #firstName,
+      #middleName,
+      #lastName{
+        width: 100%;
+      }
+
+        #dob,
+      #sid{
+        width: 100%;
+      }
+
+      #address{
+        width: 94%;
+      }
+
+      #city,
+      #province,
+      #country,
+      #zip,
+      #empty,
+      #email{
+        width: 95%;
+      }
+
+      .logo{
+        width: 100%;
+      }
+
+      .head{
+        width: 95%;
+      }
+
+      .popup{
+        width: 400px;
+        margin-top: 70px;
+      }
+       
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="logo">
+          <img src="./img/Logo 2.png" alt="" />
+        </div>
+        <div class="head" >
+          <h1>Student Registration Form</h1>
+          <p>
+            Fill out the form to apply for the training courses. You can
+            consider your application accepted after you receive a confirmation
+            email
+          </p>
+        </div>
+      </header>
+
+      <!-- form -->
+      <form action="#">
+        <h2>Student Information</h2>
+        <div
+          class="form-one"
+          style="display: flex; flex-wrap: wrap; justify-content: space-between"
+        >
+          <input
+            type="text"
+            name="fname"
+            id="firstName"
+            placeholder="First Name"
+          />
+          <input
+            type="text"
+            name="mname"
+            id="middleName"
+            placeholder="Middle Name"
+          />
+          <input
+            type="text"
+            name="lname"
+            id="lastName"
+            placeholder="Last Name"
+          />
+          <input
+            type="date"
+            name="dob"
+            id="dob"
+            placeholder="Date of Birth"
+            
+          />
+          <input
+            type="text"
+            name="sid"
+            id="sid"
+            placeholder="Student ID"
+            
+          />
+        </div>
+
+        <div class="form-two">
+          <h2>Address</h2>
+          <input
+            type="text"
+            name="address"
+            id="address"
+            placeholder="Street Address"
+          />
+          <input
+            type="text"
+            name="city"
+            id="city"
+            placeholder="City"
+          />
+          <input
+            type="text"
+            name="province"
+            id="province"
+            placeholder="State/Province"
+          />
+          <input
+            type="text"
+            name="country"
+            id="country"
+            placeholder="Country"
+          />
+          <input
+            type="text"
+            name="zip"
+            id="zip"
+            placeholder="ZIP Code"
+          />
+        </div>
+
+        <div class="form-three">
+          <h2>Contact Information</h2>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="E-mail"
+          />
+          <input type="text" id="empty"  />
+        </div>
+
+        <div class="form-four">
+          <h2>Courses <span style="color: red">*</span></h2>
+          <button
+            style="
+              padding: 10px 12px;
+              border: none;
+              outline: none;
+              margin-top: 10px;
+              margin-left: 10px;
+            "
+          >
+            <span>+</span> Add new record
+          </button>
+          <div
+            class="courses"
+            style="
+              display: flex;
+              align-items: center;
+              gap: 30px;
+              margin: 20px 10px 20px;
+            "
+          >
+            <p>
+              Course
+              <span style="margin-left: 20px"
+                ><img
+                  src="./img/filter-filled-tool-symbol.png"
+                  alt=""
+                  width="10px"
+              /></span>
+            </p>
+            <p>
+              Level
+              <span style="margin-left: 20px"
+                ><img
+                  src="./img/filter-filled-tool-symbol.png"
+                  alt=""
+                  width="10px"
+              /></span>
+            </p>
+            <p>
+              Language
+              <span style="margin-left: 20px"
+                ><img
+                  src="./img/filter-filled-tool-symbol.png"
+                  alt=""
+                  width="10px"
+              /></span>
+            </p>
+            <p>
+              Start Date
+              <span style="margin-left: 20px"
+                ><img
+                  src="./img/filter-filled-tool-symbol.png"
+                  alt=""
+                  width="10px"
+              /></span>
+            </p>
+          </div>
+          <textarea
+            name="comments"
+            id="comments"
+            placeholder="Comments"
+            cols="30"
+            rows="10"
+            style="width: 98%; margin-left: 10px"
+          ></textarea>
+        </div>
+        <input
+          type="submit"
+          value="send request"
+          style="
+            width: 98%;
+            text-transform: uppercase;
+            border: none;
+            outline: none;
+            background: blue;
+            color: white;
+            font-weight: 700;
+            cursor: pointer;
+          "
+          class="btn"
+          value="Sign Up"
+          onclick="openPopup()"
+        />
+
+        <div class="pop" id="pop">
+            
+            <div class="popup" id="popup">
+              <img src="./images/404-tick.png" alt="" />
+              <h1>Student Registration Form</h1>
+    
+              <div class="info">
+                <h2>Student Information</h2>
+                <p>First Name:</p>
+                <p>Middle Name:</p>
+                <p>Last Name:</p>
+                <p>Date Of Birth:</p>
+                <p>Student ID:</p>
+    
+                <h2>Address</h2>
+                <p>Street Address:</p>
+                <p>City:</p>
+                <p>State:</p>
+                <p>Country:</p>
+                <p>ZIP Code:</p>
+    
+                <h2>Contact Information</h2>
+                <p>E-mail:</p>
+    
+                <h2>Courses</h2>
+                <select value="courses">
+                    <option name="courses" id="empty"></option>
+                    <option name="courses" id="fe">FrontEnd Development</option>
+                    <option name="courses" id="ui">UI/UX</option>
+                </select>
+                <p>Comment:</p>
+              </div>
+    
+               
+              <button type="button" onclick="closePopup()">OK</button>
+            </div>
+        </div>
+
+      </form>
+    </div>
+
+    <script>
+      let popup = document.getElementById("popup");
+      let pop = document.getElementById("pop");
+
+      function openPopup() {
+        popup.classList.add("open-popup");
+        pop.classList.add("open-popup");
+      }
+      function closePopup() {
+        popup.classList.remove("open-popup");
+        pop.classList.remove("open-popup");
+      }
+    </script>
+  </body>
+</html>
