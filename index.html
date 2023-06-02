@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/Logo 2.png" type="image/x-icon">
     <title>TIIDELab SignUp Form</title>
     <style>
       * {
@@ -170,6 +171,10 @@
 
       .head{
         width: 95%;
+      }
+
+      .pop{
+        height: 350vh;
       }
 
       .popup{
@@ -352,6 +357,7 @@
         </div>
         <input
           type="submit"
+          id="submit"
           value="send request"
           style="
             width: 98%;
@@ -364,63 +370,24 @@
             cursor: pointer;
           "
           class="btn"
-          value="Sign Up"
-          onclick="openPopup()"
+        
         />
 
         <div class="pop" id="pop">
             
             <div class="popup" id="popup">
-              <img src="./images/404-tick.png" alt="" />
-              <h1>Student Registration Form</h1>
-    
-              <div class="info">
-                <h2>Student Information</h2>
-                <p>First Name:</p>
-                <p>Middle Name:</p>
-                <p>Last Name:</p>
-                <p>Date Of Birth:</p>
-                <p>Student ID:</p>
-    
-                <h2>Address</h2>
-                <p>Street Address:</p>
-                <p>City:</p>
-                <p>State:</p>
-                <p>Country:</p>
-                <p>ZIP Code:</p>
-    
-                <h2>Contact Information</h2>
-                <p>E-mail:</p>
-    
-                <h2>Courses</h2>
-                <select value="courses">
-                    <option name="courses" id="empty"></option>
-                    <option name="courses" id="fe">FrontEnd Development</option>
-                    <option name="courses" id="ui">UI/UX</option>
-                </select>
-                <p>Comment:</p>
+              
+              
               </div>
     
                
-              <button type="button" onclick="closePopup()">OK</button>
+              
             </div>
         </div>
 
       </form>
     </div>
 
-    <script>
-      let popup = document.getElementById("popup");
-      let pop = document.getElementById("pop");
-
-      function openPopup() {
-        popup.classList.add("open-popup");
-        pop.classList.add("open-popup");
-      }
-      function closePopup() {
-        popup.classList.remove("open-popup");
-        pop.classList.remove("open-popup");
-      }
-    </script>
+    <script src="./index.js"></script>
   </body>
 </html>
